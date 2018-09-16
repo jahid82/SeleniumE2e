@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="testcases.CreateContacts2"/>
+      <class name="testcases.VerifyLoginPageDataDriven"/>
+      <class name="unitTest.VerifyDataProvider"/>
+      <class name="testcases.CreateContacts"/>
+      <class name="testcases.VerifyLoginExcel"/>
+      <class name="unitTest.TestBrowserFactory"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test(failed)">
+    <classes>
+      <class name="testcases.CreateContacts">
+        <methods>
+          <include name="validLogin"/>
+        </methods>
+      </class> <!-- testcases.CreateContacts -->
+      <class name="testcases.CreateContacts2">
+        <methods>
+          <include name="validLogin"/>
+          <include name="logOut"/>
+          <include name="setUpReport"/>
+          <include name="endTest"/>
+          <include name="createContact"/>
+          <include name="setupApplication"/>
+        </methods>
+      </class> <!-- testcases.CreateContacts2 -->
+      <class name="testcases.VerifyLoginPageDataDriven">
+        <methods>
+          <include name="validLogin"/>
+        </methods>
+      </class> <!-- testcases.VerifyLoginPageDataDriven -->
+      <class name="testcases.VerifyLoginExcel">
+        <methods>
+          <include name="validLogin"/>
+        </methods>
+      </class> <!-- testcases.VerifyLoginExcel -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
